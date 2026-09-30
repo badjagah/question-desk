@@ -11,10 +11,49 @@
   <body>
     <main class="container">
       <h1>Question Desk</h1>
-      <p>
-        Scaffold only — build the log form, the question list, and the draft
-        button here as part of M2/M3/M4. See the project brief.
-      </p>
+
+      <form id="question-form">
+        <label for="question">Question *</label>
+        <textarea
+          id="question"
+          name="question"
+          required
+          placeholder="Enter the question..."
+        ></textarea>
+
+        <label for="asker">Asker</label>
+        <input
+          id="asker"
+          name="asker"
+          type="text"
+          placeholder="Who asked the question?"
+        />
+
+        <label for="context">Context</label>
+        <input
+          id="context"
+          name="context"
+          type="text"
+          placeholder="Where or when was it asked?"
+        />
+
+        <label for="tags">Tags</label>
+        <input
+          id="tags"
+          name="tags"
+          type="text"
+          placeholder="suffering, theodicy"
+        />
+
+        <button type="submit">Save Question</button>
+      </form>
+
+      <p id="error-message" class="error" hidden></p>
+
+      <section>
+        <h2>Questions</h2>
+        <div id="question-list"></div>
+      </section>
     </main>
   </body>
 </html>
